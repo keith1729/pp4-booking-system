@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,6 +12,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <!-- Fontawesome -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css"
@@ -23,10 +26,14 @@
 
     </header>
     <section>
+        <img src="{% static 'images/golfer.png' %}" alt="Golfer Image">
+        <!-- Page content -->
+        {% block content %}
 
+        {% endblock %}
     </section>
     <footer>
-        
+
     </footer>
   </body>
 </html>
