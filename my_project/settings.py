@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-keith1729-pp4bookingsys-7s27x7egtq4.ws.codeinstitute-ide.net']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-keith1729-pp4bookingsys-7s27x7egtq4.ws.codeinstitute-ide.net',
+]
 
 # Application definition
 
