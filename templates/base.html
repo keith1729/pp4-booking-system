@@ -19,21 +19,57 @@
       integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy"
       crossorigin="anonymous"
     />
+    <!-- Styles -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <!-- Title -->
     <title>Tee Time Titans</title>
   </head>
   <body>
-    <header>
+    
+    <nav class="navbar navbar-expand-sm navbar-light bg-primary">
+      <a href="#" class="navbar-brand"
+        ><img src="static/images/logo.jpg" alt="Golf Logo" width="200px"
+      /></a>
 
-    </header>
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-bs-target="#navbarNav"
+        data-bs-toggle="collapse"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Gallery</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
     <section>
-        <img src="{% static 'images/golfer.png' %}" alt="Golfer Image">
-        <!-- Page content -->
-        {% block content %}
-
-        {% endblock %}
+      <!-- Page content -->
+      {% block content %} 
+      
+      {% endblock %}
     </section>
-    <footer>
-
-    </footer>
+    <footer></footer>
+    <!-- Bootstrap JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
