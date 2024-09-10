@@ -26,11 +26,12 @@
     <title>Tee Time Titans</title>
   </head>
   <body>
-    <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+
+    <nav class="navbar fixed-top navbar-expand-sm navbar-dark">
       <div class="container">
 
-        <a href="#" class="navbar-brand"
-          ><img src="{% static 'images/logo.jpg' %}" alt="Golf Logo" width="200px"/>
+        <a href="#" class="navbar-brand">
+          <img class="logo" src="{% static 'images/logo.jpg' %}" alt="Logo"/>
         </a>
 
         <button
@@ -51,7 +52,7 @@
               <a href="#" class="nav-link active">Home</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">About</a>
+              <a href="about/templates/about.html" class="nav-link">About</a>
             </li>
             <li class="nav-item dropdown"></li>
               <a
@@ -77,14 +78,16 @@
 
       </div>
     </nav>
-
+    <!-- Main Section -->
     <main>
-      
+
+      <img class="background-image" src="{% static 'images/background.jpg' %}" alt="Background Image">
+
       <!-- Page content -->
       {% block content %} {% endblock %}
     </main>
     
-    <footer class="footer fixed-bottom bg-dark">
+    <footer class="footer fixed-bottom">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 text-center text-light">

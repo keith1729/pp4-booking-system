@@ -4,3 +4,48 @@
 .socials {
     margin: 40px;
 }
+
+.background-image {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: absolute;
+    z-index: -99;
+    filter: brightness(0.8);
+}
+
+.logo {
+    height: 110px;
+    width: 150px;
+    /* filter: brightness(0.95); */
+}
+
+.nav-link, .dropdown-item {
+    font-size: 1.5rem;
+}
+
+.socials {
+    font-size: 1.5rem;
+}
+
+.home-content {
+    height: 100vh;
+}
+
+.about-content {
+   height: 100vh;
+   width: 66vw;
+   margin: auto;
+}
+
+.book-a-tee-time {
+    border: 3px solid white;
+    padding: 20px;
+}
+
+.mission-statement {
+    border: 3px solid white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+}

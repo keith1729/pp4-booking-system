@@ -1,19 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tee Time Titans</title>
-</head>
-<body>
-    <h1>Tee Time Titans</h1>
-    <ul>
-        <li>
-            <p>This is the 'About' page!</p>
-        </li>
-        <li>
-            <p>This could contain gallery, contact etc..</p>
-        </li>
-    </ul>
-</body>
-</html>
+{% extends "base.html" %} 
+
+{% block content %}
+
+<div
+  class="about-content d-flex justify-content-center align-items-center text-light">
+  <div class="mission-statement">
+    <h2>Membership</h2>
+    <p>To avail of our services please create an account and make a booking!</p>
+    <h2>Our Mission</h2>
+    <p>
+      “To provide an exceptional golfing experience by offering a booking system
+      for renowned and pristine courses. We promote the love of the game for
+      players of all skill levels.”
+    </p>
+  </div>
+</div>
+
+{% endblock %}
