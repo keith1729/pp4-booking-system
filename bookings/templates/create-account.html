@@ -1,12 +1,18 @@
 {% extends "base.html" %} {% block content %}
 
-<div class="create-account">
-  <h2>Create a New Account</h2>
-  <form action="" method="POST">
-    {% csrf_token %}
-    {{ form }}
-    <button type="submit">Create Account</button>
-  </form>
+<div
+  class="home-content d-flex flex-column justify-content-center align-items-center text-light"
+>
+  <h1>Create Account</h1>
+  <div class="form-container">
+    <form action="" method="POST">
+      {% csrf_token %} {{ form }}
+      <br />
+      <div class="d-flex justify-content-center">
+        <button class="" type="submit">Create!</button>
+      </div>
+    </form>
+  </div>
 </div>
 
 {% endblock %}

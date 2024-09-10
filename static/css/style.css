@@ -1,51 +1,68 @@
 /* {% load static %} */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-.socials {
-    margin: 40px;
-}
-
-.background-image {
-    height: 100vh;
-    width: 100vw;
-    object-fit: cover;
-    position: absolute;
-    z-index: -99;
-    filter: brightness(0.8);
-}
-
+/* Navbar */
 .logo {
-    height: 110px;
-    width: 150px;
-    /* filter: brightness(0.95); */
+  height: 110px;
+  width: 150px;
+  /* filter: brightness(0.95); */
 }
 
-.nav-link, .dropdown-item {
+.nav-link {
+  font-size: 1.5rem;
+}
+
+.dropdown-item {
     font-size: 1.5rem;
+  }
+
+.navbar {
+  /* filter: brightness(0.9); */
 }
 
+/* Footer */
 .socials {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
+  margin: 40px;
 }
 
+/* Background */
+.background-image {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: absolute;
+  z-index: -99;
+  filter: brightness(0.8);
+}
+
+/* Home Page */
 .home-content {
-    height: 100vh;
-}
-
-.about-content {
-   height: 100vh;
-   width: 66vw;
-   margin: auto;
+  height: 100vh;
 }
 
 .book-a-tee-time {
-    border: 3px solid white;
-    padding: 20px;
+  border: 3px solid white;
+  padding: 20px;
 }
 
-.mission-statement {
-    border: 3px solid white;
-    padding: 20px;
-    text-align: center;
-    font-size: 1.5rem;
+/* About Page */
+.about-container {
+  height: 100vh;
+}
+
+.about-content {
+  border: 3px solid white;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  width: 66vw;
+  margin: auto;
+}
+
+/* Create Account Page */
+.form-container {
+  padding: 10px;
+  border: solid 2px white;
+  background-color: rgba(0, 38, 238, 0.6);
 }

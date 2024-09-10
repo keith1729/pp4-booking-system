@@ -19,19 +19,20 @@
       integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy"
       crossorigin="anonymous"
     />
-    <script src="https://kit.fontawesome.com/36feee7749.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/36feee7749.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Styles -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <!-- Title -->
     <title>Tee Time Titans</title>
   </head>
   <body>
-
     <nav class="navbar fixed-top navbar-expand-sm navbar-dark">
       <div class="container">
-
         <a href="#" class="navbar-brand">
-          <img class="logo" src="{% static 'images/logo.jpg' %}" alt="Logo"/>
+          <img class="logo" src="{% static 'images/logo.jpg' %}" alt="Logo" />
         </a>
 
         <button
@@ -40,31 +41,27 @@
           data-bs-target="#navbarNav"
           data-bs-toggle="collapse"
           aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
+            <li>
               <a href="#" class="nav-link active">Home</a>
             </li>
-            <li class="nav-item">
-              <a href="about/templates/about.html" class="nav-link">About</a>
+            <li>
+              <a href="#" class="nav-link">About</a>
             </li>
-            <li class="nav-item dropdown"></li>
+            <li class="dropdown">
               <a
                 href="#"
                 class="nav-link dropdown-toggle"
-                id="navbarDropdown"
                 role="button"
                 data-bs-toggle="dropdown"
-                aria-expanded="false"
                 >Login</a
               >
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <ul class="dropdown-menu dropdown-menu-end">
                 <li>
                   <a href="#" class="dropdown-item">Create New Account</a>
                 </li>
@@ -72,29 +69,36 @@
                   <a href="#" class="dropdown-item">Login</a>
                 </li>
               </ul>
-            </li>
           </ul>
         </div>
-
       </div>
     </nav>
     <!-- Main Section -->
     <main>
-
-      <img class="background-image" src="{% static 'images/background.jpg' %}" alt="Background Image">
+      <img
+        class="background-image"
+        src="{% static 'images/golfer.jpg' %}"
+        alt="Background Image"
+      />
 
       <!-- Page content -->
       {% block content %} {% endblock %}
     </main>
-    
+
     <footer class="footer fixed-bottom">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 text-center text-light">
             <h5 class="m-2">- Follow us! -</h5>
-            <a href="#" class="socials text-light" target="_blank"><i class="fa-brands fa-facebook"></i></a> 
-            <a href="#" class="socials text-light" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="#" class="socials text-light" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="socials text-light" target="_blank"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="#" class="socials text-light" target="_blank"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a href="#" class="socials text-light" target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
           </div>
         </div>
       </div>
