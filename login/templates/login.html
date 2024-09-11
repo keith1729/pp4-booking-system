@@ -3,12 +3,12 @@
 <div
   class="login-content d-flex flex-column justify-content-center align-items-center text-light"
 >
-  <h1>Login</h1>
   <div class="login-container">
+    <h1 class="text-center">Login</h1>
     <form method="post">
       {% csrf_token %} {{ form.as_p }}
       <div class="d-flex justify-content-center">
-      <button type="submit">Login</button>
+        <button type="submit">Login!</button>
       </div>
     </form>
   </div>

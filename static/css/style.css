@@ -4,7 +4,7 @@
 /* Navbar */
 .logo {
   height: 110px;
-  width: 150px;
+  width: 160px;
   /* filter: brightness(0.95); */
 }
 
@@ -21,6 +21,11 @@
 }
 
 /* Footer */
+/* .socials-container {
+  width: 33vw;
+  background-color: rgba(0, 38, 238, 0.6);
+} */
+
 .socials {
   font-size: 1.5rem;
   margin: 40px;
@@ -33,7 +38,7 @@
   object-fit: cover;
   position: absolute;
   z-index: -99;
-  filter: brightness(0.8);
+  /* filter: brightness(0.8); */
 }
 
 /* Home Page */
@@ -44,6 +49,7 @@
 .book-a-tee-time {
   border: 3px solid white;
   padding: 20px;
+  background-color: rgba(0, 38, 238, 0.5);
 }
 
 /* About Page */
@@ -58,13 +64,14 @@
   font-size: 1.5rem;
   width: 66vw;
   margin: auto;
+  background-color: rgba(0, 38, 238, 0.5);
 }
 
 /* Create Account Page */
 .form-container {
   padding: 10px;
   border: solid 2px white;
-  background-color: rgba(0, 38, 238, 0.6);
+  background-color: rgba(0, 38, 238, 0.5);
 }
 
 /* Login Page */
@@ -75,5 +82,7 @@
 .login-container {
   padding: 10px;
   border: solid 2px white;
-  background-color: rgba(0, 38, 238, 0.6);
+  background-color: rgba(0, 38, 238, 0.5);
 }
+
+

@@ -23,13 +23,18 @@
       src="https://kit.fontawesome.com/36feee7749.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="static/favicon/site.webmanifest">
     <!-- Styles -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <!-- Title -->
     <title>Tee Time Titans</title>
   </head>
   <body>
-    <nav class="navbar fixed-top navbar-expand-sm navbar-dark">
+    <nav class="navbar fixed-top navbar-expand-sm navbar-light">
       <div class="container">
         <a href="#" class="navbar-brand">
           <img class="logo" src="{% static 'images/logo.jpg' %}" alt="Logo" />
@@ -85,18 +90,18 @@
       {% block content %} {% endblock %}
     </main>
 
-    <footer class="footer fixed-bottom">
-      <div class="container">
+    <footer class="d-flex justify-content-center fixed-bottom">
+      <div class="socials-container">
         <div class="row">
-          <div class="col-sm-12 text-center text-light">
+          <div class="col-sm-12 text-center text-dark">
             <h5 class="m-2">- Follow us! -</h5>
-            <a href="#" class="socials text-light" target="_blank"
+            <a href="#" class="socials text-dark" target="_blank"
               ><i class="fa-brands fa-facebook"></i
             ></a>
-            <a href="#" class="socials text-light" target="_blank"
+            <a href="#" class="socials text-dark" target="_blank"
               ><i class="fa-brands fa-x-twitter"></i
             ></a>
-            <a href="#" class="socials text-light" target="_blank"
+            <a href="#" class="socials text-dark" target="_blank"
               ><i class="fa-brands fa-instagram"></i
             ></a>
           </div>
