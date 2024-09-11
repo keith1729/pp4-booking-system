@@ -5,7 +5,6 @@
 .logo {
   height: 110px;
   width: 160px;
-  /* filter: brightness(0.95); */
 }
 
 .nav-link {
@@ -16,16 +15,7 @@
   font-size: 1.5rem;
 }
 
-.navbar {
-  /* filter: brightness(0.9); */
-}
-
 /* Footer */
-/* .socials-container {
-  width: 33vw;
-  background-color: rgba(0, 38, 238, 0.6);
-} */
-
 .socials {
   font-size: 1.5rem;
   margin: 40px;
@@ -38,7 +28,6 @@
   object-fit: cover;
   position: absolute;
   z-index: -99;
-  /* filter: brightness(0.8); */
 }
 
 /* Home Page */
@@ -85,4 +74,7 @@
   background-color: rgba(0, 38, 238, 0.5);
 }
 
-
+/* Hover Effects */
+.hvr-back-pulse {
+  background: yellow;
+}
