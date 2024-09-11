@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block content %}
+
+<div
+  class="login-content d-flex flex-column justify-content-center align-items-center text-light"
+>
+  <h1>Login</h1>
+  <div class="login-container">
+    <form method="post">
+      {% csrf_token %} {{ form.as_p }}
+      <div class="d-flex justify-content-center">
+      <button type="submit">Login</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
