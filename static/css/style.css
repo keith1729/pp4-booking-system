@@ -17,8 +17,12 @@
 
 /* Footer */
 .socials {
+  font-size: 2rem;
+  margin: 60px;
+}
+
+.socials-heading {
   font-size: 1.5rem;
-  margin: 40px;
 }
 
 /* Background */
@@ -75,6 +79,10 @@
 }
 
 /* Hover Effects */
-.hvr-back-pulse {
+/* .hvr-underline-reveal:Hover  {
   background: yellow;
+} */
+
+.hvr-underline-reveal:hover:before {
+  background-color: rgba(0, 38, 238, 0.6);
 }
