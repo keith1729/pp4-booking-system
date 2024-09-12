@@ -1,0 +1,88 @@
+/* {% load static %} */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* Navbar */
+.logo {
+  height: 110px;
+  width: 160px;
+}
+
+.nav-link {
+  font-size: 1.5rem;
+}
+
+.dropdown-item {
+  font-size: 1.5rem;
+}
+
+/* Footer */
+.socials {
+  font-size: 2rem;
+  margin: 60px;
+}
+
+.socials-heading {
+  font-size: 1.5rem;
+}
+
+/* Background */
+.background-image {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: absolute;
+  z-index: -99;
+}
+
+/* Home Page */
+.home-content {
+  height: 100vh;
+}
+
+.book-a-tee-time {
+  border: 3px solid white;
+  padding: 20px;
+  background-color: rgba(0, 38, 238, 0.5);
+}
+
+/* About Page */
+.about-container {
+  height: 100vh;
+}
+
+.about-content {
+  border: 3px solid white;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  width: 66vw;
+  margin: auto;
+  background-color: rgba(0, 38, 238, 0.5);
+}
+
+/* Create Account Page */
+.form-container {
+  padding: 10px;
+  border: solid 2px white;
+  background-color: rgba(0, 38, 238, 0.5);
+}
+
+/* Login Page */
+.login-content {
+  height: 100vh;
+}
+
+.login-container {
+  padding: 10px;
+  border: solid 2px white;
+  background-color: rgba(0, 38, 238, 0.5);
+}
+
+/* Hover Effects */
+/* .hvr-underline-reveal:Hover  {
+  background: yellow;
+} */
+
+.hvr-underline-reveal:hover:before {
+  background-color: rgba(0, 38, 238, 0.6);
+}
