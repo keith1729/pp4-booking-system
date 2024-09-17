@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% block content %}
+
+<div
+  class="home-content d-flex flex-column justify-content-center align-items-center text-light"
+>
+  <div class="form-container">
+    <h1 class="text-center">Make a Booking!</h1>
+    <br/>
+    <form action="" method="POST">
+      {% csrf_token %} {{ form.as_p }}
+      <br/>
+      <div class="d-flex justify-content-center">
+        <button type="submit">Book Tee Time!</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
