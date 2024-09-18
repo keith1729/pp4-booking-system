@@ -103,6 +103,17 @@
         alt="Background Image"
       />
 
+      {% if messages %}
+      <div class="alert alert-dismissible" role="alert">
+        {% for message in messages %}
+          <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      {% endif %}
+
       <!-- Page content -->
       {% block content %} {% endblock %}
     </main>
