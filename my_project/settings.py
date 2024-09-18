@@ -50,6 +50,8 @@ INSTALLED_APPS = [
     'create',
     'login',
     'booking',
+    'crispy_forms',
+    'crispy_bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -80,6 +82,8 @@ TEMPLATES = [
         },
     },
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 WSGI_APPLICATION = 'my_project.wsgi.application'
 

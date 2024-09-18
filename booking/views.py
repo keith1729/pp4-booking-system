@@ -15,3 +15,7 @@ def create_booking(request):
 # Successful booking view
 def booking_success(request):
     return render(request, 'booking/booking_success.html')
+
+# Cancel booking view
+def cancel_booking(request):
+    return render(request, 'booking/cancel_booking.html')
