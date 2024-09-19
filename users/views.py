@@ -10,6 +10,12 @@ class RegistrationView(View):
     initial = {'key': 'value'}
     template_name = 'users/registration.html'
 
+    def dispatch(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            return redirect(to='/')
+
+        return super(RegisterView, self).dispatch(request, *args, **kwargs)
+
     def get(self, request, *args, **kwargs):
         form = self.form_class(initial=self.initial)
         return render(request, self.template_name, {'form': form})
@@ -23,11 +29,11 @@ class RegistrationView(View):
             username = form.cleaned_data.get('username')
             messages.success(request, f'Account created for {username}')
 
-            return redirect(to='/')
+            return redirect(to='login')
 
         return render(request, self.template_name, {'form': form})
 
-
+    
 class LoginFormView(LoginView):
     form_class = LoginForm
 
