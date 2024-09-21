@@ -1,0 +1,12 @@
+{% extends "base.html" %} {% block content %}
+<div
+  class="home-content d-flex flex-column justify-content-center align-items-center text-light"
+>
+  <div class="form-container">
+    <h1 class="text-center">You have been logged out!</h1>
+    <br />
+    <a href="{% url 'home' %}">Home</a>
+    <a href="#">Login</a>
+  </div>
+</div>
+{% endblock %}

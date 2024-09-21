@@ -52,7 +52,7 @@
   <body>
     <nav class="navbar fixed-top navbar-expand-sm navbar-light">
       <div class="container">
-        <a href="#" class="navbar-brand">
+        <a href="{% url 'home' %}" class="navbar-brand">
           <img class="logo hvr-grow-shadow" src="{% static 'images/logo.jpg' %}" alt="Logo" />
         </a>
 
@@ -70,34 +70,33 @@
           <ul class="navbar-nav ms-auto">
 
             {% if user.is_authenticated %}
-              <a href="#" class="nav-item nav-link">Profile</a>
-              <a href="{% url 'logout' %}" class="nav-item nav-link">Logout</a>
+              <a href="#" class="nav-link hvr-underline-reveal text-dark">Profile</a>
+              <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit" class="nav-link hvr-underline-reveal text-dark">Logout</button>
+              </form>
             {% else %}
-              <a href="{% url 'login' %}" class="nav-item nav-link">Sign in</a>
-            {% endif %}
-
-            <li>
-              <a href="#" class="nav-link hvr-underline-reveal active">Home</a>
-            </li>
-            <li>
-              <a href="#" class="nav-link hvr-underline-reveal">About</a>
-            </li>
-            <li class="dropdown">
+              <li class="dropdown">
               <a
                 href="#"
-                class="nav-link hvr-underline-reveal dropdown-toggle"
+                class="nav-link hvr-underline-reveal dropdown-toggle text-dark"
                 role="button"
                 data-bs-toggle="dropdown"
                 >Login</a
               >
               <ul class="dropdown-menu dropdown-menu-end">
                 <li>
-                  <a href="#" class="dropdown-item hvr-underline-reveal">Create New Account</a>
+                  <a href="{% url 'register' %}" class="dropdown-item hvr-underline-reveal text-dark">Register New Account</a>
                 </li>
                 <li>
-                  <a href="#" class="dropdown-item hvr-underline-reveal">Login</a>
+                  <a href="#" class="dropdown-item hvr-underline-reveal text-dark">Sign In</a>
                 </li>
               </ul>
+              </li>
+            {% endif %}
+
+            <li>
+              <a href="{% url 'about' %}" class="nav-link hvr-underline-reveal text-dark">About</a>
             </li>
           </ul>
         </div>
@@ -111,19 +110,10 @@
         alt="Background Image"
       />
 
-      {% if messages %}
-      <div class="alert alert-dismissible" role="alert">
-        {% for message in messages %}
-          <div class="alert alert-{{ message.tags }}">{{ message }}</div>
-        {% endfor %}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      {% endif %}
-
       <!-- Page content -->
-      {% block content %} {% endblock %}
+      {% block content %} 
+      
+      {% endblock %}
     </main>
 
     <footer class="d-flex justify-content-center fixed-bottom">
