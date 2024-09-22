@@ -1,4 +1,4 @@
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import ListView
 from django.urls import reverse_lazy
 from .models import Booking
@@ -55,3 +55,11 @@ class UpdateBookingView(UpdateView):
     def get_queryset(self):
         return Booking.objects.filter(user=self.request.user)
 
+
+class DeleteBookingView(DeleteView):
+    model = Booking
+    template_name = 'delete_booking.html'
+    success_url = reverse_lazy('my_bookings')
+
+    def get_queryset(self):
+        return Booking.objects.filter(user=self.request.user)
