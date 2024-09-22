@@ -83,3 +83,8 @@
   background-color: rgba(0, 38, 238, 0.6);
 }
 
+.custom-alert {
+  position: absolute;
+  
+  margin-top: 200px;
+}

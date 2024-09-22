@@ -46,8 +46,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
-    'create',
-    'login',
     'booking',
     'crispy_forms',
     'crispy_bootstrap5',
@@ -91,7 +89,7 @@ WSGI_APPLICATION = 'my_project.wsgi.application'
 # SESSION_COOKIE_AGE = 60 * 60 * 24 * 30
 
 LOGIN_REDIRECT_URL = '/'
-LOGIN_URL = 'login'
+# LOGIN_URL = 'login'
 LOGOUT_REDIRECT_URL = '/'
 
 # Database
