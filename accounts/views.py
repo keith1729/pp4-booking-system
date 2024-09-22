@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.views.generic import TemplateView
-from django.views.generic.edit import FormView
+from django.views.generic.edit import CreateView
 from .forms import RegisterForm
 from django.urls import reverse_lazy
 
@@ -35,7 +35,7 @@ class AboutView(TemplateView):
     template_name = 'about.html'
 
 
-class RegisterView(FormView):
+class RegisterView(CreateView):
     template_name = 'register.html'
     form_class = RegisterForm
     success_url = reverse_lazy('home')

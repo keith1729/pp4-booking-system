@@ -5,7 +5,18 @@
 >
   <div class="form-container">
     <h1 class="text-center">Booking Successful!</h1>
-    
+    <h5 class="card-title">Thank you for your booking</h5>
+    <p class="card-text">Please take note of your booking details below:</p>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Date: {{ booking.date }}</li>
+      <li class="list-group-item">Time: {{ booking.time }}</li>
+      <li class="list-group-item">
+        Number of Players: {{ booking.number_of_players }}
+      </li>
+    </ul>
+    <div class="text-center">
+      <a href="{% url 'home' %}" class="btn btn-primary mt-3">Go to Home</a>
+    </div>
   </div>
 </div>
 

@@ -18,11 +18,3 @@ class Booking(models.Model):
         return f'Booking | {self.user.username} on {self.date} at {self.time} for {self.number_of_players} players.'
 
 
-# class CancelBooking(models.Model):
-#   booking = models.OneToOneField(Booking, on_delete=models.CASCADE, related_name='cancelation')
-#   user = models.ForeignKey(User, on_delete=models.CASCADE)
-#   reason = models.TextField()
-#   canceled_at = models.DateTimeField(auto_now_add=True)
-
-#   def __str__(self):
-#     return f"{self.user.username} has canceled their booking on {self.booking.date} at {self.booking.time}."
