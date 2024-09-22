@@ -1,4 +1,4 @@
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView
 from django.views.generic import ListView
 from django.urls import reverse_lazy
 from .models import Booking
@@ -46,17 +46,12 @@ class BookingListView(LoginRequiredMixin, ListView):
         return Booking.objects.filter(user=self.request.user)
 
 
-# def create_booking(request):
-#     if request.method == 'POST':
-#         form = BookingForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-#             return redirect('booking_success')
-#     else:
-#         form = BookingForm()
-#     return render(request, 'booking/create_booking.html', {'form': form})
+class UpdateBookingView(UpdateView):
+    model = Booking
+    form_class = BookingForm
+    template_name = 'edit_booking.html'
+    success_url = reverse_lazy('my_bookings')
 
+    def get_queryset(self):
+        return Booking.objects.filter(user=self.request.user)
 
-# # Cancel booking view
-# def cancel_booking(request):
-#     return render(request, 'booking/cancel_booking.html')
