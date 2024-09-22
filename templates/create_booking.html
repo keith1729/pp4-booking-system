@@ -5,13 +5,13 @@
   class="home-content d-flex flex-column justify-content-center align-items-center text-light"
 >
   <div class="form-container">
-    <h1 class="text-center">Make a Booking!</h1>
+    <h1 class="text-center">Book a Tee Time!</h1>
     <br/>
     <form method="POST">
       {% csrf_token %} {{ form|crispy }}
       <br/>
       <div class="d-flex justify-content-center">
-        <button type="submit">Book Tee Time!</button>
+        <button type="submit">Confirm</button>
       </div>
     </form>
   </div>

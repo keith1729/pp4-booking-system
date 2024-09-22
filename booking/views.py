@@ -1,7 +1,26 @@
-# from django.shortcuts import render, redirect
-# from .forms import BookingForm
+from django.views.generic.edit import CreateView
+from django.urls import reverse_lazy
+from .models import Booking
+from .forms import BookingForm
+from django.contrib import messages
 
-# # Create booking form view
+# Create booking form view
+
+
+class BookingView(CreateView):
+    model = Booking
+    form_class = BookingForm
+    template_name = 'create_booking.html'
+    success_url = reverse_lazy('booking_success')
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        booking = form.save()
+        messages.success(self.request, f'Booking Successful! Welcome {self.request.user.username}! Your booking is confirmed for {
+                         booking.date} at {booking.time} with {booking.number_of_players} players.')
+        return super().form_valid(form)
+
+
 # def create_booking(request):
 #     if request.method == 'POST':
 #         form = BookingForm(request.POST)

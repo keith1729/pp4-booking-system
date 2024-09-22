@@ -8,8 +8,6 @@ from .forms import RegisterForm
 from django.urls import reverse_lazy
 
 # Create your views here.
-# class UserLoginView(TemplateView):
-#     template_name = 'login.html'
 
 def user_login(request):
     if request.method == 'POST':
@@ -19,6 +17,7 @@ def user_login(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
+            messages.success(request, f'Login Successful! Welcome {user.username}!')
             return redirect('home')
         else:
             messages.success(request, 'There was an error logging in! Please try again...')
@@ -44,6 +43,7 @@ class RegisterView(FormView):
     def form_valid(self, form):
         user = form.save()
         login(self.request, user)
+        messages.success(self.request, f'Registration Successful! Welcome {user.username}!')
         return super().form_valid(form)
 
 
