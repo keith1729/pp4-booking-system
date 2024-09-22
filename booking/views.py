@@ -1,9 +1,11 @@
 from django.views.generic.edit import CreateView
+from django.views.generic import ListView
 from django.urls import reverse_lazy
 from .models import Booking
 from .forms import BookingForm
 from django.contrib import messages
 from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 # Create booking form view
@@ -33,6 +35,15 @@ def booking_success(request):
     booking_id = request.session.get('booking_id')
     booking = get_object_or_404(Booking, id=booking_id)
     return render(request, 'booking_success.html', {'booking': booking})
+
+
+class BookingListView(LoginRequiredMixin, ListView):
+    model = Booking
+    template_name = 'booking_list.html'
+    context_object_name = 'bookings'
+
+    def get_queryset(self):
+        return Booking.objects.filter(user=self.request.user)
 
 
 # def create_booking(request):
