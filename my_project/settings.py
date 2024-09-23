@@ -45,12 +45,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home',
-    'crispy_forms',
-    'crispy_bootstrap5',
-    'users',
     'accounts',
     'booking',
+    'crispy_forms',
+    'crispy_bootstrap5',
+    'bootstrap_datepicker_plus',
 ]
 
 MIDDLEWARE = [

@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} {% block content %} {% load crispy_forms_tags %}
 
 <div
   class="login-content d-flex flex-column justify-content-center align-items-center text-light"
@@ -9,7 +9,7 @@
     </div>
     <br />
     <form method="post">
-      {% csrf_token %} {{ form.as_p }}
+      {% csrf_token %} {{ form.media }} {{ form|crispy }}
       <div class="text-center">
         <button type="submit" class="btn btn-primary">Save Changes</button>
       </div>
@@ -17,4 +17,24 @@
   </div>
 </div>
 
+<script type="text/javascript">
+  $(document).ready(function () {
+    $(".datepicker").datepicker({
+      format: "yyyy-mm-dd",
+      autoclose: true,
+      todayHighlight: true,
+    });
+    $(".timepicker").timepicker({
+      timeFormat: "HH:mm:ss",
+      interval: 10,
+      minTime: "06:00",
+      maxTime: "20:00",
+      defaultTime: "now",
+      startTime: "06:00",
+      dynamic: false,
+      dropdown: true,
+      scrollbar: true,
+    });
+  });
+</script>
 {% endblock %}

@@ -21,10 +21,6 @@
   margin: 60px;
 }
 
-.socials-heading {
-  font-size: 1.5rem;
-}
-
 /* Background */
 .background-image {
   height: 100vh;
@@ -78,11 +74,15 @@
   background-color: rgba(0, 38, 238, 0.5);
 }
 
-/* Hover Effects */
-/* .hvr-underline-reveal:Hover  {
-  background: yellow;
-} */
-
 .hvr-underline-reveal:hover:before {
   background-color: rgba(0, 38, 238, 0.6);
+}
+
+.custom-alert {
+  position: absolute;
+  background-color: white;
+  color: red;
+  z-index: 1050;
+  left: 50%;
+  transform: translateX(-50%);
 }
