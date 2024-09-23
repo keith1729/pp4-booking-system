@@ -4,13 +4,25 @@
   class="login-content d-flex flex-column justify-content-center align-items-center text-light"
 >
   <div class="login-container">
-    <h1 class="text-center">Welcome to Golf!</h1>
+    <h1>Welcome to Golf!</h1>
+    <br />
     <!-- <br />
     <h5>
       Whether you're a seasoned pro or just starting out, our beautiful course
       and top-notch facilities are ready to provide you with an unforgettable
       golfing experience.
     </h5> -->
+
+    <!-- <div class="home-content d-flex justify-content-center align-items-center">
+      <button class="book-a-tee-time text-light hvr-grow-shadow" type="button">
+        <h1>Book a Tee Time!</h1>
+      </button>
+    </div> -->
+    <div class="text-center">
+      <a href="{% url 'create_booking' %}" class="btn btn-primary book-a-tee-time text-light hvr-grow-shadow"
+        >Book a Tee Time!</a
+      >
+    </div>
   </div>
 </div>
 
