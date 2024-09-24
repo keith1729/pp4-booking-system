@@ -10,7 +10,8 @@
       {% csrf_token %} {{ form.media }} {{ form|crispy }}
       <br />
       <div class="d-flex justify-content-center">
-        <button type="submit">Confirm</button>
+        <button class="btn btn-primary hvr-grow-shadow" type="submit">Confirm</button>
+        <a href="{% url 'home' %}" class="btn btn-danger hvr-grow-shadow">Back</a>
       </div>
     </form>
   </div>
@@ -24,7 +25,7 @@
       todayHighlight: true,
     });
     $(".timepicker").timepicker({
-      timeFormat: "HH:mm:ss",
+      timeFormat: "HH:mm",
       interval: 10,
       minTime: "06:00",
       maxTime: "20:00",

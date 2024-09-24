@@ -39,6 +39,12 @@
   border: 3px solid white;
   padding: 20px;
   background-color: rgba(0, 38, 238, 0.5);
+  width: 20vw;
+  font-size: 1.5rem;
+}
+
+.book-a-tee-time:hover {
+  text-decoration: none;
 }
 
 /* About Page */

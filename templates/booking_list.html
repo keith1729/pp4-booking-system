@@ -15,12 +15,12 @@
         <strong>Players:</strong> {{ booking.number_of_players }}
         <a
           href="{% url 'edit_booking' booking.pk %}"
-          class="btn btn-primary mt-2"
+          class="btn btn-primary hvr-grow-shadow"
           >Edit</a
         >
         <a
           href="{% url 'delete_booking' booking.pk %}"
-          class="btn btn-danger mt-2"
+          class="btn btn-danger hvr-grow-shadow"
           >Delete</a
         >
       </li>

@@ -11,7 +11,8 @@
     <form method="post">
       {% csrf_token %} {{ form.media }} {{ form|crispy }}
       <div class="text-center">
-        <button type="submit" class="btn btn-primary">Save Changes</button>
+        <button type="submit" class="btn btn-primary hvr-grow-shadow">Save Changes</button>
+        <a href="{% url 'my_bookings' %}" class="btn btn-danger hvr-grow-shadow">Back</a>
       </div>
     </form>
   </div>
@@ -25,7 +26,7 @@
       todayHighlight: true,
     });
     $(".timepicker").timepicker({
-      timeFormat: "HH:mm:ss",
+      timeFormat: "HH:mm",
       interval: 10,
       minTime: "06:00",
       maxTime: "20:00",

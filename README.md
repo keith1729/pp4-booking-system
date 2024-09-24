@@ -46,27 +46,29 @@
 
 From the start when developing this website I imagined the site from the users perspective. This immediately posed questions such as: 
 - Why would a user want to visit this website?
-    - The website provides a service for booking tee times on our golf course.
+    - The website provides a booking service for tee times on a golf course.
 - What would bring a user back to the website?
     - A user would return to the website if they experience a user-friendly interface with easy navigation and a streamlined booking service.
 
 #### Agile Planning:
 
-An agile approach was taken for the planning of this website. This allowed me to take an iterative strategy towards the projects goals and break down milestones into smaller tasks. Also this allowed me to be flexible throughout the websites development and refine, adjust and add features to the website as needed. A kanban board was implemented for the project where I could assign labels of 'Must Have', 'Could Have' and 'Should Have' to my user stories. As I worked on and completed each I moved them from 'Todo' to 'In Progress' to 'Done' which gave me a clear plan of what stage the project was in and which features took priority.  
+An agile approach was taken for the planning of this website. This allowed me to take an iterative strategy towards the projects goals and break down the user stories into smaller tasks, I thought about these in terms of accepted criteria(AC). Also this allowed me to be flexible throughout the websites development and refine, adjust and add features to the website as needed. A kanban board was used for project management where I could assign labels of 'Must Have', 'Could Have' and 'Should Have' to my user stories. As I worked on each I moved them from 'Todo' to 'In Progress' to 'Done' which gave me a clear plan of what stage the project was in and which features took priority.
 
 #### User Stories:
 
-The user stories were written from the users perspective. This gave me the opportunity to envisage what a user would want to see on the home page etc. The following user stories were completed throughtout the development of the website:
+The user stories were written from the users perspective. This gave me the opportunity to envisage what a user would want to see on the home page, login page etc. The following user stories were completed throughtout the development of the website:
 - New User Registration
-    - As a 'non-registered user' I can 'create an account' so that 'I can sign in to my account'.
+    - As a 'non-registered user' I can 'create an account' so that 'I can use the websites service'.
 - Login/Logout
     - As a 'registered user' I can 'login and logout' so that 'I can access my account securely'.
 - Make a Booking
-    - As a 'registered user' I can 'access the book tee time page' so that 'I can book a tee time'.
+    - As a 'registered user' I can 'access a booking page' so that 'I can book a tee time'.
+- View a Booking
+    - As a 'registered user' I can 'access a list of my bookings' so that 'I can view my bookings'.
 - Update a Booking
-    - As a 'registered user' I can 'access my bookings' so that 'I can update my bookings'.
+    - As a 'registered user' I can 'access a list of my bookings' so that 'I can update a booking'.
 - Delete a Booking
-    - As a 'registered user' I can 'access my bookings' so that 'I can cancel a booking'.
+    - As a 'registered user' I can 'access a list of my bookings' so that 'I can delete a booking'.
 
 #### Website Flow:
 
@@ -78,23 +80,31 @@ Balsamiq was leveraged for making wireframes which would guide the development p
 
 - Home page
 
-<img src="assets/images/wireframes-homepage.PNG" alt="Wireframes Home">
+  <img src="assets/images/wireframes-homepage.PNG" alt="Wireframes Home">
+
+<br/>
 
 - Registration page
 
-<img src="assets/images/wireframes-register.PNG" alt="Wireframes Registration">
+  <img src="assets/images/wireframes-register.PNG" alt="Wireframes Registration">
+
+<br/>
 
 - Login page
 
-<img src="assets/images/wireframes-login.PNG" alt="Wireframes Login">
+  <img src="assets/images/wireframes-login.PNG" alt="Wireframes Login">
+
+<br/>
 
 - Booking page
 
-<img src="assets/images/wireframes-booking.PNG" alt="Wireframes Booking">
+  <img src="assets/images/wireframes-booking.PNG" alt="Wireframes Booking">
+
+<br/>
 
 - My bookings page
 
-<img src="assets/images/wireframes-mybookings.PNG" alt="Wireframes My Bookings">
+  <img src="assets/images/wireframes-mybookings.PNG" alt="Wireframes My Bookings">
 
 #### Styles:
 
@@ -102,21 +112,22 @@ Balsamiq was leveraged for making wireframes which would guide the development p
 
 #### Colours:
 
-### Database Model
-#### ERD:
+## Database Model
+### ERD:
 
-- The ERD shows the booking model and its associated fields, the user field has a many to one relationship with djangos built-in User model as a single user can have many bookings but each booking is related to only one user.
+- The ERD shows the Booking model and its associated fields. The user field has a many to one relationship with djangos built-in User model as a single user can have many bookings but each booking is related to only one user.
 
 <img src="assets/images/erd-booking.PNG" alt="ERD Booking">
 
-### Features
-#### Existing Features:
+## Features
+### Existing Features:
 
 - Header
+    - Logged out - shows the logo and gives options to register new account, login and see the about page for the website.
+    <img src="assets/images/features-header1.png" alt="Features Header/logged_out">
 
-This includes the title/logo of the golf course and navigational links.
-
-<img src="assets/images/features-header.PNG" alt="Features Header">
+    - Logged in - also shows logo and about page and gives options for booking a tee time, viewing my bookings and safely logging out of my account.
+    <img src="assets/images/features-header2.png" alt="Features Header/logged_in">
 
 - Footer
 
@@ -136,3 +147,14 @@ This provides log in functionality.
 
 <img src="" alt="Features Login">
 
+- Book a Tee Time
+
+Enables a registered user with booking capabilities.
+
+<img src="" alt="Features Booking">
+
+- View Bookings
+
+Presents a list of a logged in users bookings.
+
+<img src="" alt="Features View Bookings">

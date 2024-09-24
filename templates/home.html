@@ -3,9 +3,18 @@
 <div
   class="login-content d-flex flex-column justify-content-center align-items-center text-light"
 >
-  <div class="login-container">
-    <h1>Welcome to Golf!</h1>
-    <br />
+{% if user.is_authenticated %}
+<div class="text-center">
+  <a
+    href="{% url 'create_booking' %}"
+    class="book-a-tee-time hvr-grow-shadow text-light"
+    >Book a Tee Time!</a
+  >
+</div>
+{% else %}
+  <div class="login-container text-center">
+    <h1>Welcome to <strong>Tee Time Titans!</strong></h1>
+    <h4>Become a <strong>Titan</strong> and book Tee Times with us</h4>
     <!-- <br />
     <h5>
       Whether you're a seasoned pro or just starting out, our beautiful course
@@ -18,12 +27,16 @@
         <h1>Book a Tee Time!</h1>
       </button>
     </div> -->
-    <div class="text-center">
-      <a href="{% url 'create_booking' %}" class="btn btn-primary book-a-tee-time text-light hvr-grow-shadow"
-        >Book a Tee Time!</a
-      >
-    </div>
   </div>
+  {% endif %}
+  <!-- <br /> -->
+  <!-- <div class="text-center">
+    <a
+      href="{% url 'create_booking' %}"
+      class="btn btn-primary hvr-grow-shadow book-a-tee-time text-light"
+      >Book a Tee Time!</a
+    >
+  </div> -->
 </div>
 
 {% endblock %}
