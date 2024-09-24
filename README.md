@@ -1,131 +1,138 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Golf Booking Site
 
-Welcome Keith O'Donoghue,
+## Table of Contents:
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+1. UX-Design
+    - Planning
+        - Design Thinking 
+        - Agile
+        - User Stories
+        - Website Flow
+    - WireFrames
+        - Styles
+        - Fonts
+        - Colours
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+2. Database Model
+    - ERD
 
-## Gitpod Reminders
+3. Features
+    - Existing Features
+    - Future Features
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+4. Technologies Used
+    - Languages
+    - Frameworks and Libraries
+    - Tools
 
-`python3 -m http.server`
+5. Manual Testing
+    - Responsiveness
+    - Browser Compatibility
+    - Lighthouse
+    - Code Validation
+    - User Stories
+    - Features
+    - Bugs
 
-A blue button should appear to click: _Make Public_,
+6. Deployment
+    - Heroku
 
-Another blue button should appear to click: _Open Browser_.
+7. References
+    - Credits
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+## UX-Design
+### Planning
+#### Design Thinking:
 
-A blue button should appear to click: _Make Public_,
+From the start when developing this website I imagined the site from the users perspective. This immediately posed questions such as: 
+- Why would a user want to visit this website?
+    - The website provides a service for booking tee times on our golf course.
+- What would bring a user back to the website?
+    - A user would return to the website if they experience a user-friendly interface with easy navigation and a streamlined booking service.
 
-Another blue button should appear to click: _Open Browser_.
+#### Agile Planning:
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+An agile approach was taken for the planning of this website. This allowed me to take an iterative strategy towards the projects goals and break down milestones into smaller tasks. Also this allowed me to be flexible throughout the websites development and refine, adjust and add features to the website as needed. A kanban board was implemented for the project where I could assign labels of 'Must Have', 'Could Have' and 'Should Have' to my user stories. As I worked on and completed each I moved them from 'Todo' to 'In Progress' to 'Done' which gave me a clear plan of what stage the project was in and which features took priority.  
 
-To log into the Heroku toolbelt CLI:
+#### User Stories:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+The user stories were written from the users perspective. This gave me the opportunity to envisage what a user would want to see on the home page etc. The following user stories were completed throughtout the development of the website:
+- New User Registration
+    - As a 'non-registered user' I can 'create an account' so that 'I can sign in to my account'.
+- Login/Logout
+    - As a 'registered user' I can 'login and logout' so that 'I can access my account securely'.
+- Make a Booking
+    - As a 'registered user' I can 'access the book tee time page' so that 'I can book a tee time'.
+- Update a Booking
+    - As a 'registered user' I can 'access my bookings' so that 'I can update my bookings'.
+- Delete a Booking
+    - As a 'registered user' I can 'access my bookings' so that 'I can cancel a booking'.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+#### Website Flow:
 
-### Connecting your Mongo database
+Writing the user stories allowed me to visualise how the website would take form and what features should be where and when they should be there.
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+### Wireframes
 
-------
+Balsamiq was leveraged for making wireframes which would guide the development process.
 
-## Release History
+- Home page
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+<img src="assets/images/wireframes-homepage.PNG" alt="Wireframes Home">
 
-**June 18, 2024,** Add Mongo back into template
+- Registration page
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+<img src="assets/images/wireframes-register.PNG" alt="Wireframes Registration">
 
-**May 28 2024:** Fix Mongo and Links installs
+- Login page
 
-**April 26 2024:** Update node version to 16
+<img src="assets/images/wireframes-login.PNG" alt="Wireframes Login">
 
-**September 20 2023:** Update Python version to 3.9.17.
+- Booking page
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+<img src="assets/images/wireframes-booking.PNG" alt="Wireframes Booking">
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- My bookings page
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+<img src="assets/images/wireframes-mybookings.PNG" alt="Wireframes My Bookings">
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+#### Styles:
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+#### Fonts:
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+#### Colours:
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Database Model
+#### ERD:
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+- The ERD shows the booking model and its associated fields, the user field has a many to one relationship with djangos built-in User model as a single user can have many bookings but each booking is related to only one user.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+<img src="assets/images/erd-booking.PNG" alt="ERD Booking">
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Features
+#### Existing Features:
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+- Header
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+This includes the title/logo of the golf course and navigational links.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+<img src="assets/images/features-header.PNG" alt="Features Header">
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+- Footer
 
-------
+This includes the social media links for the golf course.
 
-## FAQ about the uptime script
+<img src="assets/images/features-footer.PNG" alt="Features Footer">
 
-**Why have you added this script?**
+- Register New Account
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+This allows a user to register a new account.
 
-**How will this affect me?**
+<img src="" alt="Features Registration">
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+- Login
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+This provides log in functionality.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+<img src="" alt="Features Login">
 
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
