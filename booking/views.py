@@ -11,7 +11,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 # Create booking form view
 
 
-class BookingView(CreateView):
+class BookingView(LoginRequiredMixin, CreateView):
     model = Booking
     form_class = BookingForm
     template_name = 'create_booking.html'
@@ -46,7 +46,7 @@ class BookingListView(LoginRequiredMixin, ListView):
         return Booking.objects.filter(user=self.request.user)
 
 
-class UpdateBookingView(UpdateView):
+class UpdateBookingView(LoginRequiredMixin, UpdateView):
     model = Booking
     form_class = BookingForm
     template_name = 'edit_booking.html'

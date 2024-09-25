@@ -133,11 +133,6 @@
     </nav>
     <!-- Main Section -->
     <main>
-      <img
-        class="background-image"
-        src="{% static 'images/golfer.jpg' %}"
-        alt="Background Image"
-      />
 
       {% if messages %}
         {% for message in messages %}
@@ -154,7 +149,7 @@
       {% endblock %}
     </main>
 
-    <footer class="d-flex justify-content-center fixed-bottom">
+    <footer class="footer d-flex justify-content-center">
       <div class="row">
         <div class="col-sm-12 text-center hvr-grow-shadow text-light">
           <h5 class="socials-heading">- Follow us! -</h5>
