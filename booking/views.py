@@ -39,7 +39,7 @@ def booking_success(request):
 
 class BookingListView(LoginRequiredMixin, ListView):
     model = Booking
-    template_name = 'booking_list.html'
+    template_name = 'my_bookings.html'
     context_object_name = 'bookings'
 
     def get_queryset(self):

@@ -1,32 +1,29 @@
 {% extends "base.html" %} {% block content %}
 
 <div
-  class="login-content d-flex flex-column justify-content-center align-items-center text-light"
+  class="d-flex flex-column justify-content-center align-items-center text-light"
 >
   <div class="form-container">
     <h1 class="text-center">Login</h1>
     <br />
-    
     <form method="post">
-      {% csrf_token %} 
-
-      
-        <div class="mb-3">
-          <label for="username" class="form-label">Username</label>
-          <input type="text" class="form-control" name="username">
-          
-        </div>
-        <div class="mb-3">
-          <label for="password" class="form-label">Password</label>
-          <input type="password" class="form-control" name="password">
-        </div>
-        
-        
-
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" class="form-control" name="username" />
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" name="password" />
+      </div>
       <br />
       <div class="d-flex justify-content-center">
-        <button class="btn btn-primary hvr-grow-shadow" type="submit">Login</button>
-        <a href="{% url 'home' %}" class="btn btn-danger hvr-grow-shadow">Back</a>
+        <button class="btn btn-primary hvr-grow-shadow" type="submit">
+          Login
+        </button>
+        <a href="{% url 'home' %}" class="btn btn-danger hvr-grow-shadow"
+          >Back</a
+        >
       </div>
     </form>
   </div>

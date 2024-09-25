@@ -33,7 +33,7 @@ main {
 
 .socials {
   font-size: 2rem;
-  margin: 0 50px; /* Adjust the value as needed for desired spacing */
+  margin: 0 50px;
 }
 
 /* Navbar */
@@ -62,19 +62,6 @@ main {
   text-decoration: none;
 }
 
-/* About Page */
-.about-container {
-  border: 3px solid white;
-  padding: 20px;
-  text-align: center;
-  font-size: 1.5rem;
-  width: 66vw;
-  margin: auto;
-  background-color: rgba(0, 38, 238, 0.5);
-  z-index: 1050;
-}
-
-/* Create Account Page */
 .form-container {
   padding: 10px;
   border: solid 2px white;
@@ -85,8 +72,7 @@ main {
   max-width: 66vw;
 }
 
-/* Login Page */
-.login-content {
+.container-home {
   height: 100vh;
 }
 

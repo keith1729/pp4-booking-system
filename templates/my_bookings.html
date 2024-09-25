@@ -1,6 +1,7 @@
 {% extends "base.html" %} {% block content %}
+
 <div
-  class="login-content d-flex flex-column justify-content-center align-items-center text-light"
+  class="d-flex flex-column justify-content-center align-items-center text-light"
 >
   <div class="form-container">
     <div class="text-center">
@@ -13,16 +14,18 @@
         <strong>Date:</strong> {{ booking.date }}<br />
         <strong>Time:</strong> {{ booking.time }}<br />
         <strong>Players:</strong> {{ booking.number_of_players }}
-        <a
-          href="{% url 'edit_booking' booking.pk %}"
-          class="btn btn-primary hvr-grow-shadow"
-          >Edit</a
-        >
-        <a
-          href="{% url 'delete_booking' booking.pk %}"
-          class="btn btn-danger hvr-grow-shadow"
-          >Delete</a
-        >
+        <div class="text-center">
+          <a
+            href="{% url 'edit_booking' booking.pk %}"
+            class="btn btn-primary hvr-grow-shadow"
+            >Edit</a
+          >
+          <a
+            href="{% url 'delete_booking' booking.pk %}"
+            class="btn btn-danger hvr-grow-shadow"
+            >Delete</a
+          >
+        </div>
       </li>
       {% endfor %}
     </ul>
