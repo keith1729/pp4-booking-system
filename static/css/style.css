@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+* {
+  margin: 0;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -9,21 +13,12 @@ body {
   background-size: cover;
   background-position: center; 
   background-repeat: no-repeat; 
+  overflow-x: hidden;
 }
 
 main {
   flex-grow: 1;
 }
-
-/* .footer {
-  background-color: rgba(0, 38, 238, 0);
-  width: 100vw;
-  padding: 10px;
-}
-
-.socials {
-  font-size: 2rem;
-} */
 
 .footer {
   background-color: rgba(0, 38, 238, 0);
@@ -41,9 +36,6 @@ main {
   margin: 0 50px; /* Adjust the value as needed for desired spacing */
 }
 
-/* body {
-  overflow-x: hidden;
-} */
 /* Navbar */
 .logo {
   height: 110px;
@@ -56,21 +48,6 @@ main {
 
 .dropdown-item {
   font-size: 1.5rem;
-}
-
-
-/* Background */
-.background-image {
-  min-height: 50vh;
-  width: 100vw;
-  object-fit: cover;
-  position: absolute;
-  z-index: -99;
-}
-
-/* Home Page */
-.home-content {
-  min-height: 50vh;
 }
 
 .book-a-tee-time {
@@ -104,6 +81,8 @@ main {
   background-color: rgba(0, 38, 238, 0.5);
   z-index: 1050;
   position: relative;
+  margin-top: 130px;
+  max-width: 66vw;
 }
 
 /* Login Page */
@@ -122,8 +101,4 @@ main {
   z-index: 1050;
   left: 50%;
   transform: translateX(-50%);
-}
-
-.register {
-  margin: 50px;
 }
