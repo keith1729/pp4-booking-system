@@ -106,6 +106,8 @@ Balsamiq was leveraged for making wireframes which would guide the development p
 
   <img src="assets/images/wireframes-mybookings.PNG" alt="Wireframes My Bookings">
 
+<br/>
+
 #### Styles:
 
 #### Fonts:
@@ -129,32 +131,85 @@ Balsamiq was leveraged for making wireframes which would guide the development p
     - Logged in - also shows logo and about page and gives options for booking a tee time, viewing my bookings and safely logging out of my account.
     <img src="assets/images/features-header2.png" alt="Features Header/logged_in">
 
+<br/>
+
 - Footer
 
 This includes the social media links for the golf course.
 
 <img src="assets/images/features-footer.PNG" alt="Features Footer">
 
+<br/>
+
 - Register New Account
 
 This allows a user to register a new account.
 
-<img src="" alt="Features Registration">
+<img src="assets/images/features-registration.png" alt="Features Registration">
+
+<br/>
 
 - Login
 
 This provides log in functionality.
 
-<img src="" alt="Features Login">
+<img src="assets/images/features-login.png" alt="Features Login">
+
+<br/>
 
 - Book a Tee Time
 
 Enables a registered user with booking capabilities.
 
-<img src="" alt="Features Booking">
+<img src="assets/images/features-make_booking.png" alt="Features Booking">
 
-- View Bookings
+<br/>
 
-Presents a list of a logged in users bookings.
+- My Bookings
 
-<img src="" alt="Features View Bookings">
+Presents a list of a users bookings.
+
+<img src="assets/images/features-my_bookings.png" alt="Features View Bookings">
+
+<br/>
+
+### Future Features:
+
+## Technologies Used
+### Languages
+
+- HTML
+- CSS
+- Javascript
+- Python
+
+### Frameworks and Libraries
+
+- Django was used as the main Python framework in the development of this website. It is a high-level Python web framework that encourages rapid development and clean, pragmatic design.
+
+- Bootstrap was used as the main front-end development framework. It is very effective in creating visually appealing and responsive web designs.
+
+- Django Crispy Forms was used for rendering the forms.
+
+### Tools
+
+- PostgreSQL was used for its relational database management system.
+
+- Balsamiq for design wireframes.
+
+- Github for storing the projects code.
+
+## Manual Testing
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass / Fail | 
+| ----- | ----- | ----- | ----- | ----- |
+| A user loads the site | Home page with welcoming message | Loaded site | Home page loaded with clear welcoming message | Pass |
+| Logo links to home page | When logo is clicked I get redirected to home page | Logo clicked from all pages on site | Redirected to home page | Pass |
+| Navbar links | Redirected to correct page on site | All links were clicked from different site pages | The correct pages were rendered from all navbar links | Pass |
+| Register new account | When this link is clicked user is redirected to registration form | Form filled out correctly and incorrectly | Alert messages display showing user what fields need filling or adjusting | Pass |
+| Registration pop up message | Registered new account is clearly stated to user | New accounts registered | Pop up shows every time welcoming user | Pass |
+| Login | User can login to their account by entering username and password | Log in form correctly and incorrectly filled out | With valid login details user logged in to correct account, invalid details prompt an alert message | Pass |
+| Login pop up message | After logging in successfully a pop up message shows stating such and welcoming the user | Logged in numerous times | Pop up message shows every time | Pass |
+| Navbar changes when user logs in | After successful login navbar changes to show account and logout options | Logged in numerous times | Navbar shows account dropdown options and logout | Pass |
+| Home page changes when user logs in | After successful login home page changes to give user a booking button | Logged in numerous times |   
+

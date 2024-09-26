@@ -4,8 +4,8 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.views.generic import TemplateView
 from django.views.generic.edit import CreateView
-from .forms import RegisterForm
 from django.urls import reverse_lazy
+from .forms import RegisterForm
 
 # Create your views here.
 
