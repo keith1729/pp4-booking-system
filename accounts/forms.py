@@ -13,9 +13,9 @@ class RegisterForm(UserCreationForm):
     email = forms.EmailField(max_length=50, required=True, widget=forms.TextInput(
         attrs={'placeholder': 'Email', 'class': 'form-control', }))
     password1 = forms.CharField(max_length=50, required=True, widget=forms.PasswordInput(
-        attrs={'placeholder': 'Password', 'class': 'form-control', 'data-toggle': 'password', 'id': 'password', }))
+        attrs={'placeholder': 'Password', 'class': 'form-control', 'data-toggle': 'password', 'id': 'password1', }))
     password2 = forms.CharField(max_length=50, required=True, widget=forms.PasswordInput(
-        attrs={'placeholder': 'Confirm Password', 'class': 'form-control', 'data-toggle': 'password', 'id': 'password', }))
+        attrs={'placeholder': 'Confirm Password', 'class': 'form-control', 'data-toggle': 'password', 'id': 'password2', }))
 
     class Meta:
         model = User

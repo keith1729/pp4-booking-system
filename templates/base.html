@@ -3,8 +3,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <!-- Bootstrap -->
@@ -15,18 +15,27 @@
       crossorigin="anonymous"
     />
     <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!-- Bootstrap Datepicker CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+      rel="stylesheet"
+    />
     <!-- Bootstrap Timepicker CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css"
+      rel="stylesheet"
+    />
     <!-- Fontawesome -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css"
       integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy"
       crossorigin="anonymous"
-    >
+    />
     <script
       src="https://kit.fontawesome.com/36feee7749.js"
       crossorigin="anonymous"
@@ -36,24 +45,27 @@
       rel="apple-touch-icon"
       sizes="180x180"
       href="static/favicon/apple-touch-icon.png"
-    >
+    />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="static/favicon/favicon-32x32.png"
-    >
+    />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
       href="static/favicon/favicon-16x16.png"
-    >
-    <link rel="manifest" href="static/favicon/site.webmanifest">
+    />
+    <link rel="manifest" href="static/favicon/site.webmanifest" />
     <!-- Hover CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
+    />
     <!-- Styles -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <!-- Title -->
     <title>Tee Time Titans</title>
   </head>
@@ -61,7 +73,11 @@
     <nav class="navbar fixed-top navbar-expand-sm navbar-light">
       <div class="container">
         <a href="{% url 'home' %}" class="navbar-brand">
-          <img class="logo hvr-grow-shadow" src="{% static 'images/logo.jpg' %}" alt="Logo">
+          <img
+            class="logo hvr-grow-shadow"
+            src="{% static 'images/logo.jpg' %}"
+            alt="Logo"
+          />
         </a>
         <button
           type="button"
@@ -75,7 +91,11 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li>
-              <a href="{% url 'home' %}" class="nav-link hvr-underline-reveal text-dark">Home</a>
+              <a
+                href="{% url 'home' %}"
+                class="nav-link hvr-underline-reveal text-dark"
+                >Home</a
+              >
             </li>
             {% if user.is_authenticated %}
             <li class="dropdown">
@@ -88,19 +108,34 @@
               >
               <ul class="dropdown-menu dropdown-menu-end">
                 <li>
-                  <a href="{% url 'create_booking' %}" class="dropdown-item hvr-underline-reveal text-dark">Book a Tee Time!</a>
+                  <a
+                    href="{% url 'create_booking' %}"
+                    class="dropdown-item hvr-underline-reveal text-dark"
+                    >Book a Tee Time!</a
+                  >
                 </li>
                 <li>
-                  <a href="{% url 'my_bookings' %}" class="dropdown-item hvr-underline-reveal text-dark">My Bookings</a>
+                  <a
+                    href="{% url 'my_bookings' %}"
+                    class="dropdown-item hvr-underline-reveal text-dark"
+                    >My Bookings</a
+                  >
                 </li>
               </ul>
-              </li>
+            </li>
+            <div>
               <form method="post" action="{% url 'logout' %}">
                 {% csrf_token %}
-                <button type="submit" class="nav-link hvr-underline-reveal text-dark">Logout</button>
+                <button
+                  type="submit"
+                  class="nav-link hvr-underline-reveal text-dark"
+                >
+                  Logout
+                </button>
               </form>
+            </div>
             {% else %}
-              <li class="dropdown">
+            <li class="dropdown">
               <a
                 href="#"
                 class="nav-link hvr-underline-reveal dropdown-toggle text-dark"
@@ -110,16 +145,28 @@
               >
               <ul class="dropdown-menu dropdown-menu-end">
                 <li>
-                  <a href="{% url 'register' %}" class="dropdown-item hvr-underline-reveal text-dark">Register New Account</a>
+                  <a
+                    href="{% url 'register' %}"
+                    class="dropdown-item hvr-underline-reveal text-dark"
+                    >Register New Account</a
+                  >
                 </li>
                 <li>
-                  <a href="{% url 'login' %}" class="dropdown-item hvr-underline-reveal text-dark">Sign In</a>
+                  <a
+                    href="{% url 'login' %}"
+                    class="dropdown-item hvr-underline-reveal text-dark"
+                    >Sign In</a
+                  >
                 </li>
               </ul>
-              </li>
+            </li>
             {% endif %}
             <li>
-              <a href="{% url 'about' %}" class="nav-link hvr-underline-reveal text-dark">About</a>
+              <a
+                href="{% url 'about' %}"
+                class="nav-link hvr-underline-reveal text-dark"
+                >About</a
+              >
             </li>
           </ul>
         </div>
@@ -127,30 +174,43 @@
     </nav>
     <!-- Main Section -->
     <main>
-      {% if messages %}
-        {% for message in messages %}
-        <div class="alert alert-warning alert-dismissible custom-alert" role="alert">
-          {{ message }}
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-        {% endfor %}
-      {% endif %}
+      {% if messages %} {% for message in messages %}
+      <div
+        class="alert alert-warning alert-dismissible custom-alert"
+        role="alert"
+      >
+        {{ message }}
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+      {% endfor %} {% endif %}
       <!-- Page content -->
-      {% block content %} 
-      
-      {% endblock %}
+      {% block content %} {% endblock %}
     </main>
     <footer class="footer d-flex justify-content-center">
       <div class="row">
         <div class="col-sm-12 text-center hvr-grow-shadow text-light">
           <h5 class="socials-heading">- Follow us! -</h5>
-          <a href="https://www.facebook.com/" class="socials hvr-float-shadow text-light" target="_blank"
+          <a
+            href="https://www.facebook.com/"
+            class="socials hvr-float-shadow text-light"
+            target="_blank"
             ><i class="fa-brands fa-facebook"></i
           ></a>
-          <a href="https://x.com/" class="socials hvr-float-shadow text-light" target="_blank"
+          <a
+            href="https://x.com/"
+            class="socials hvr-float-shadow text-light"
+            target="_blank"
             ><i class="fa-brands fa-x-twitter"></i
           ></a>
-          <a href="https://www.instagram.com/" class="socials hvr-float-shadow text-light" target="_blank"
+          <a
+            href="https://www.instagram.com/"
+            class="socials hvr-float-shadow text-light"
+            target="_blank"
             ><i class="fa-brands fa-instagram"></i
           ></a>
         </div>
