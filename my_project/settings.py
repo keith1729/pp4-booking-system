@@ -85,7 +85,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 WSGI_APPLICATION = 'my_project.wsgi.application'
 
-# SESSION_COOKIE_AGE = 60 * 60 * 24 * 30
+SESSION_COOKIE_AGE = 60 * 60 * 24 * 30
 
 LOGIN_REDIRECT_URL = '/'
 # LOGIN_URL = 'login'

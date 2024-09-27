@@ -237,5 +237,6 @@ Balsamiq was leveraged for making wireframes which would guide the development p
 | My bookings | Displays a list of the users bookings | Accessed my bookings with multiple accounts | Displayed associated bookings with the correct user | Pass |
 | Update/edit bookings | Lets a user update their bookings | Updated numerous bookings with different accounts | Correctly updates bookings | Pass |
 | Delete bookings | Lets a user delete/cancel a booking | Deleted numerous bookings with different accounts | Successsfully deletes bookings | Pass |
- 
+| Admin page | Superuser or user with staff permissions can log in to admin page and manipulate data | Attempted to log into admin page as superuser and regular user | Successfully logs in with superuser details, unsuccessful attempts as regular user | Pass |
+|
 
