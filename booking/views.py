@@ -24,7 +24,7 @@ class BookingView(LoginRequiredMixin, CreateView):
                          self.object.date} at {self.object.time} with {self.object.number_of_players} players.')
         self.request.session['booking_id'] = self.object.id
         return super().form_valid(form)
-    
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['booking'] = self.object
@@ -63,3 +63,7 @@ class DeleteBookingView(DeleteView):
 
     def get_queryset(self):
         return Booking.objects.filter(user=self.request.user)
+
+
+def custom_404(request, exception):
+    return render(request, '404.html', status=404)
