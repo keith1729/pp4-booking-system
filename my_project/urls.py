@@ -27,4 +27,3 @@ urlpatterns = [
     path('booking/', include('booking.urls')),
 ]
 
-handler404 = 'booking.views.custom_404'

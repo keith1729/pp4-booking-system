@@ -15,6 +15,7 @@ class Booking(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f'Booking | {self.user.username} on {self.date} at {self.time} for {self.number_of_players} players.'
-
-
+        return f'Booking | {
+            self.user.username} on {
+                self.date} at {self.time} for {
+                    self.number_of_players} players.'

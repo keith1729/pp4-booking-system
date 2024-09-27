@@ -20,8 +20,10 @@ class BookingForm(forms.ModelForm):
         time = cleaned_data.get('time')
 
         if date and time:
-            booking_datetime = timezone.make_aware(datetime.datetime.combine(date, time))
+            booking_datetime = timezone.make_aware(
+                datetime.datetime.combine(date, time))
             if booking_datetime < timezone.now():
-                raise forms.ValidationError("You cannot book a time in the past!")
+                raise forms.ValidationError(
+                    "You cannot book a time in the past!")
 
         return cleaned_data

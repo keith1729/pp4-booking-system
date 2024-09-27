@@ -5,7 +5,7 @@
 >
   <div class="form-container">
     <h1 class="text-center">Book a Tee Time!</h1>
-    <br />
+    <br>
     <form method="POST">
       {% csrf_token %} {{ form.media }} {{ form|crispy }}
       <br />
@@ -16,7 +16,7 @@
     </form>
   </div>
 </div>
-<script type="text/javascript">
+<script>
   $(document).ready(function () {
     $(".datepicker").datepicker({
       format: "yyyy-mm-dd",

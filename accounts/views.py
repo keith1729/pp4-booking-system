@@ -9,20 +9,23 @@ from .forms import RegisterForm
 
 # Create your views here.
 
+
 def user_login(request):
     if request.method == 'POST':
-        
+
         username = request.POST["username"]
         password = request.POST["password"]
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            messages.success(request, f'Login Successful! Welcome {user.username}!')
+            messages.success(request, f'Login Successful! Welcome {
+                             user.username}!')
             return redirect('home')
         else:
-            messages.success(request, 'There was an error logging in! Please try again...')
+            messages.success(
+                request, 'There was an error logging in! Please try again...')
             return redirect('login')
-    
+
     else:
         return render(request, 'login.html', {})
 
@@ -43,9 +46,6 @@ class RegisterView(CreateView):
     def form_valid(self, form):
         user = form.save()
         login(self.request, user)
-        messages.success(self.request, f'Registration Successful! Welcome {user.username}!')
+        messages.success(self.request, f'Registration Successful! Welcome {
+                         user.username}!')
         return super().form_valid(form)
-
-
-
-

@@ -8,12 +8,6 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 
-# Create booking form view
-
-class Custom404(TemplateView):
-    template_name = 'templates/404.html'
-
-
 class BookingView(LoginRequiredMixin, CreateView):
     model = Booking
     form_class = BookingForm
@@ -23,8 +17,12 @@ class BookingView(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         self.object = form.save()
-        messages.success(self.request, f'Booking Successful! Welcome {self.request.user.username}! Your booking is confirmed for {
-                         self.object.date} at {self.object.time} with {self.object.number_of_players} players.')
+        messages.success(
+            self.request, f'Booking Successful! Welcome {
+                self.request.user.username}! Your booking is confirmed for {
+                    self.object.date} at {
+                        self.object.time} with {
+                            self.object.number_of_players} players.')
         self.request.session['booking_id'] = self.object.id
         return super().form_valid(form)
 
@@ -66,7 +64,3 @@ class DeleteBookingView(DeleteView):
 
     def get_queryset(self):
         return Booking.objects.filter(user=self.request.user)
-
-
-def custom_404(request, exception):
-    return render(request, 'templates/404.html', status=404)
