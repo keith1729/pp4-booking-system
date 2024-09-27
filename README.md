@@ -98,13 +98,13 @@ Balsamiq was leveraged for making wireframes which would guide the development p
 
 - Booking page
 
-  <img src="assets/images/wireframes-booking.PNG" alt="Wireframes Booking">
+<img src="assets/images/wireframes-make_booking.PNG" alt="Wireframes My Booking">
 
 <br/>
 
 - My bookings page
 
-  <img src="assets/images/wireframes-mybookings.PNG" alt="Wireframes My Bookings">
+  <img src="assets/images/wireframes-my_bookings.PNG" alt="Wireframes My Bookings">
 
 <br/>
 
@@ -135,15 +135,22 @@ Balsamiq was leveraged for making wireframes which would guide the development p
 
 - Footer
 
-This includes the social media links for the golf course.
-
 <img src="assets/images/features-footer.PNG" alt="Features Footer">
 
 <br/>
 
-- Register New Account
+- Home Page 
+    - Logged out
 
-This allows a user to register a new account.
+    <img src="assets/images/features-home_logged_out.png" alt="Features Footer">
+    
+    - Logged in
+
+    <img src="assets/images/features-home_logged_in.png" alt="Features Footer">
+
+<br/>  
+
+- Register New Account
 
 <img src="assets/images/features-registration.png" alt="Features Registration">
 
@@ -151,25 +158,37 @@ This allows a user to register a new account.
 
 - Login
 
-This provides log in functionality.
-
 <img src="assets/images/features-login.png" alt="Features Login">
 
 <br/>
 
 - Book a Tee Time
 
-Enables a registered user with booking capabilities.
-
-<img src="assets/images/features-make_booking.png" alt="Features Booking">
+<img src="assets/images/features-make_booking.png" alt="Features Make a Booking">
 
 <br/>
 
 - My Bookings
 
-Presents a list of a users bookings.
-
 <img src="assets/images/features-my_bookings.png" alt="Features View Bookings">
+
+<br/>
+
+- Update Booking
+
+<img src="assets/images/features-update_booking.png" alt="Features Update Booking">
+
+<br/>
+
+- Delete Booking
+
+<img src="assets/images/features-delete_booking.png" alt="Features Delete Booking">
+
+<br/>
+
+- About page
+
+<img src="assets/images/features-about_page.png" alt="Features About Page">
 
 <br/>
 
@@ -211,5 +230,12 @@ Presents a list of a users bookings.
 | Login | User can login to their account by entering username and password | Log in form correctly and incorrectly filled out | With valid login details user logged in to correct account, invalid details prompt an alert message | Pass |
 | Login pop up message | After logging in successfully a pop up message shows stating such and welcoming the user | Logged in numerous times | Pop up message shows every time | Pass |
 | Navbar changes when user logs in | After successful login navbar changes to show account and logout options | Logged in numerous times | Navbar shows account dropdown options and logout | Pass |
-| Home page changes when user logs in | After successful login home page changes to give user a booking button | Logged in numerous times |   
+| Home page changes when user logs in | After successful login home page changes to give user a booking option | Logged in numerous times | Home page changes correctly when user successfully logs in | Pass |
+| Logout | Logs user out of their account and redirects to home page | Logged out numerous times | Logs user out and redirects to home page | Pass |
+| Book a Tee Time | Brings user to booking page | Clicked book a tee time numerous times | Brings user to booking page successfully | Pass |
+| Successful booking | Displays booking details to user after successful booking | Made numerous bookings with different accounts | Displays users booking details each time a booking is made | Pass |
+| My bookings | Displays a list of the users bookings | Accessed my bookings with multiple accounts | Displayed associated bookings with the correct user | Pass |
+| Update/edit bookings | Lets a user update their bookings | Updated numerous bookings with different accounts | Correctly updates bookings | Pass |
+| Delete bookings | Lets a user delete/cancel a booking | Deleted numerous bookings with different accounts | Successsfully deletes bookings | Pass |
+ 
 

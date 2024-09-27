@@ -1,5 +1,40 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-image: url('/static/images/golfer.jpg');
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  overflow-x: hidden;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.footer {
+  background-color: rgba(0, 38, 238, 0);
+  width: 100vw;
+  padding: 10px;
+}
+
+.footer .row {
+  display: flex;
+  justify-content: center;
+}
+
+.socials {
+  font-size: 2rem;
+  margin: 0 50px;
+}
 
 /* Navbar */
 .logo {
@@ -15,63 +50,30 @@
   font-size: 1.5rem;
 }
 
-/* Footer */
-.socials {
-  font-size: 2rem;
-  margin: 60px;
-}
-
-/* Background */
-.background-image {
-  height: 100vh;
-  width: 100vw;
-  object-fit: cover;
-  position: absolute;
-  z-index: -99;
-}
-
-/* Home Page */
-.home-content {
-  height: 100vh;
-}
-
 .book-a-tee-time {
   border: 3px solid white;
   padding: 20px;
   background-color: rgba(0, 38, 238, 0.5);
+  width: 33vw;
+  font-size: 2rem;
 }
 
-/* About Page */
-.about-container {
-  height: 100vh;
+.book-a-tee-time:hover {
+  text-decoration: none;
 }
 
-.about-content {
-  border: 3px solid white;
-  padding: 20px;
-  text-align: center;
-  font-size: 1.5rem;
-  width: 66vw;
-  margin: auto;
-  background-color: rgba(0, 38, 238, 0.5);
-}
-
-/* Create Account Page */
 .form-container {
   padding: 10px;
   border: solid 2px white;
   background-color: rgba(0, 38, 238, 0.5);
+  z-index: 1050;
+  position: relative;
+  margin-top: 130px;
+  max-width: 66vw;
 }
 
-/* Login Page */
-.login-content {
+.container-home {
   height: 100vh;
-}
-
-.login-container {
-  padding: 10px;
-  border: solid 2px white;
-  background-color: rgba(0, 38, 238, 0.5);
 }
 
 .hvr-underline-reveal:hover:before {
