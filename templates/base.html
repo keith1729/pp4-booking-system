@@ -88,7 +88,7 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li>
               <a
@@ -162,6 +162,88 @@
             </li>
             {% endif %}
             <li>
+              <a
+                href="{% url 'about' %}"
+                class="nav-link hvr-underline-reveal text-dark"
+                >About</a
+              >
+            </li>
+          </ul>
+        </div> -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                href="{% url 'home' %}"
+                class="nav-link hvr-underline-reveal text-dark"
+                >Home</a
+              >
+            </li>
+            {% if user.is_authenticated %}
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link hvr-underline-reveal dropdown-toggle text-dark"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Account</a
+              >
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a
+                    href="{% url 'create_booking' %}"
+                    class="dropdown-item hvr-underline-reveal text-dark"
+                    >Book a Tee Time!</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="{% url 'my_bookings' %}"
+                    class="dropdown-item hvr-underline-reveal text-dark"
+                    >My Bookings</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button
+                  type="submit"
+                  class="btn nav-link hvr-underline-reveal text-dark"
+                >
+                  Logout
+                </button>
+              </form>
+            </li>
+            {% else %}
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link hvr-underline-reveal dropdown-toggle text-dark"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Login</a
+              >
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a
+                    href="{% url 'register' %}"
+                    class="dropdown-item hvr-underline-reveal text-dark"
+                    >Register New Account</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="{% url 'login' %}"
+                    class="dropdown-item hvr-underline-reveal text-dark"
+                    >Sign In</a
+                  >
+                </li>
+              </ul>
+            </li>
+            {% endif %}
+            <li class="nav-item">
               <a
                 href="{% url 'about' %}"
                 class="nav-link hvr-underline-reveal text-dark"
