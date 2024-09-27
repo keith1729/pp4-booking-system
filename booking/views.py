@@ -1,5 +1,5 @@
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.views.generic import ListView
+from django.views.generic import ListView, TemplateView
 from django.urls import reverse_lazy
 from .models import Booking
 from .forms import BookingForm
@@ -9,6 +9,9 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 # Create booking form view
+
+class Custom404(TemplateView):
+    template_name = 'templates/404.html'
 
 
 class BookingView(LoginRequiredMixin, CreateView):
@@ -66,4 +69,4 @@ class DeleteBookingView(DeleteView):
 
 
 def custom_404(request, exception):
-    return render(request, '404.html', status=404)
+    return render(request, 'templates/404.html', status=404)

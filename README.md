@@ -37,8 +37,7 @@
 6. Deployment
     - Heroku
 
-7. References
-    - Credits
+7. Credits
 
 ## UX-Design
 ### Planning
@@ -109,17 +108,17 @@ Balsamiq was leveraged for making wireframes which would guide the development p
 <br/>
 
 #### Styles:
-
-#### Fonts:
+- This website follows a minimilistic approach with clean lines and easy user navigation.
 
 #### Colours:
+- For user readability a vibrant blue was used as the primary colour with a contrasting white for the text.
 
 ## Database Model
 ### ERD:
 
 - The ERD shows the Booking model and its associated fields. The user field has a many to one relationship with djangos built-in User model as a single user can have many bookings but each booking is related to only one user.
 
-<img src="assets/images/erd-booking.PNG" alt="ERD Booking">
+<img src="assets/images/booking_erd.png" alt="ERD Booking">
 
 ## Features
 ### Existing Features:
@@ -194,13 +193,20 @@ Balsamiq was leveraged for making wireframes which would guide the development p
 
 ### Future Features:
 
+- New password functionality to allow a user to change if their password if lost or forgotten.
+
+- Email verification for bookings.
+
 ## Technologies Used
 ### Languages
 
-- HTML
-- CSS
-- Javascript
-- Python
+- HTML was used to create the structure of the websites pages.
+
+- CSS was used to style the web pages.
+
+- Javascript used to create interactive and dynamic web pages.
+
+- Python was used as the backbone of this project for creating models, forms and views.
 
 ### Frameworks and Libraries
 
@@ -214,11 +220,15 @@ Balsamiq was leveraged for making wireframes which would guide the development p
 
 - PostgreSQL was used for its relational database management system.
 
+- Github for version control and storing the projects code.
+
 - Balsamiq for design wireframes.
 
-- Github for storing the projects code.
+- Google for research.
 
-## Manual Testing
+- dbdiagram for creating booking model ERD.
+
+## Testing
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass / Fail | 
 | ----- | ----- | ----- | ----- | ----- |
@@ -238,5 +248,18 @@ Balsamiq was leveraged for making wireframes which would guide the development p
 | Update/edit bookings | Lets a user update their bookings | Updated numerous bookings with different accounts | Correctly updates bookings | Pass |
 | Delete bookings | Lets a user delete/cancel a booking | Deleted numerous bookings with different accounts | Successsfully deletes bookings | Pass |
 | Admin page | Superuser or user with staff permissions can log in to admin page and manipulate data | Attempted to log into admin page as superuser and regular user | Successfully logs in with superuser details, unsuccessful attempts as regular user | Pass |
-|
+
+## Deployment
+### Heroku
+This website was deployed to Heroku using the following steps:
+
+Navigate to create new app and use a unique name with '-' for spaces.
+After entering the newly created app navigate to deploy on the navbar at the top of the page. I clicked on Github for the deployment method and then scrolled down to the bottom of the page to manual deployment. Here I made sure the branch was set to main and then selected 'Deploy Branch'. Heroku will then pull the websites code from Github and begin the build log. After a successful build navigate to the top of the page and select 'Open app' to see the deployed website.
+
+## Credits
+- Code Institute for the Full-Stack Software Development course.
+- My mentor for guidance on code and providing examples to learn from.
+- My course facilitator for giving support and advice on project strategies.
+- Youtube tutorials for extra material for learning Django and Bootstrap.
+- ChatGPT for code breakdowns and explanations.
 
