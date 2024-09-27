@@ -1,7 +1,16 @@
+annotated-types==0.7.0
 asgiref==3.8.1
+black==24.8.0
+click==8.1.7
+crispy-bootstrap5==2024.2
 dj-database-url==0.5.0
 Django==5.1.1
+django-bootstrap-datepicker-plus==5.0.5
+django-crispy-forms==2.3
 gunicorn==23.0.0
+pathspec==0.12.1
 psycopg2==2.9.9
+pydantic==2.9.2
+pydantic_core==2.23.4
 sqlparse==0.5.1
 whitenoise==6.7.0
